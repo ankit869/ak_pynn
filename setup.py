@@ -1,9 +1,11 @@
 import os
 from setuptools import setup, find_packages
 
-VERSION = '0.1.7'
-DESCRIPTION = 'A simplistic and efficient pure-python neural network library'
-LONG_DESCRIPTION = 'A package that allows to build multilayer neural network with ease.'
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
+VERSION = '0.1.8'
+DESCRIPTION = 'A simplistic and efficient pure-python neural network library that allows to build multilayer neural network with ease.'
 
 setup(
     name = "ak_pynn",
@@ -11,10 +13,10 @@ setup(
     author="Ankit kohli",
     author_email="<contact.ankitkohli@gmail.com>",
     description=DESCRIPTION,
-    long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
     license = "MIT",
     packages=find_packages(exclude=['datasets']),
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     keywords = ["neural network", "pure python", "ankit_nn", "machine learning", "ML", "deep learning", "deepL", "MLP", "perceptron","ankit kohli","ak_pynn"],
     install_requires=['numpy', 
                       'tqdm',
